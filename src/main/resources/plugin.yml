@@ -1,0 +1,92 @@
+name: AquaVIP
+version: 1.0.0
+main: com.aquaforge.vip.AquaVipPlugin
+api-version: '1.21'
+author: Turgut Efekan Koç (@efekkoc)
+website: https://github.com/aquaforge-mc
+description: Enterprise Monetization & Timed VIP Perks Engine for AquaForge Ecosystem
+softdepend: [AquaRanks, AquaChat, AquaEconomy, AquaScoreboard]
+
+commands:
+  givevip:
+    description: Grants timed or permanent VIP to a player (Used by Web Store or Admins)
+    permission: aquavip.admin
+    usage: /givevip <player> <tier> <duration(e.g. 30d, 7d, 24h, permanent)>
+  takevip:
+    description: Revokes VIP status from a player immediately
+    permission: aquavip.admin
+    usage: /takevip <player>
+  viptime:
+    description: Displays remaining VIP subscription time
+    usage: /viptime [player]
+  vip:
+    description: View available VIP tiers, perks, and current status
+    usage: /vip
+  fly:
+    description: Toggle donor flight mode
+    permission: aquavip.perk.fly
+    usage: /fly
+  feed:
+    description: Replenish hunger bar
+    permission: aquavip.perk.feed
+    usage: /feed
+  heal:
+    description: Replenish health and cure status effects
+    permission: aquavip.perk.heal
+    usage: /heal
+  craft:
+    description: Open virtual crafting table
+    permission: aquavip.perk.craft
+    usage: /craft
+  anvil:
+    description: Open virtual anvil
+    permission: aquavip.perk.anvil
+    usage: /anvil
+  enderchest:
+    description: Open your ender chest from anywhere
+    aliases: [ec]
+    permission: aquavip.perk.enderchest
+    usage: /enderchest
+  hat:
+    description: Wear the held item as a helmet
+    permission: aquavip.perk.hat
+    usage: /hat
+  near:
+    description: Scan for nearby players
+    permission: aquavip.perk.near
+    usage: /near
+  vipkit:
+    description: Claim VIP kit
+    usage: /vipkit [tier]
+
+permissions:
+  aquavip.admin:
+    description: Gives full administration control over AquaVIP
+    default: op
+  aquavip.fullserver.bypass:
+    description: Allows joining when the server is full
+    default: op
+  aquavip.perk.fly:
+    description: Allows toggling fly mode
+    default: op
+  aquavip.perk.feed:
+    description: Allows feeding self
+    default: op
+  aquavip.perk.heal:
+    description: Allows healing self
+    default: op
+  aquavip.perk.craft:
+    description: Allows opening virtual crafting table
+    default: op
+  aquavip.perk.anvil:
+    description: Allows opening virtual anvil
+    default: op
+  aquavip.perk.enderchest:
+    description: Allows opening virtual enderchest
+    default: op
+  aquavip.perk.hat:
+    description: Allows wearing hats
+    default: op
+  aquavip.perk.near:
+    description: Allows scanning nearby players
+    default: op

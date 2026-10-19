@@ -1,0 +1,118 @@
+# ==============================================================================
+#                      AquaVIP Enterprise Configuration
+#                 AquaForge Ecosystem - Multi-Tier Monetization
+# ==============================================================================
+
+settings:
+  check-interval-seconds: 60
+  broadcast-vip-join: true
+  spawn-join-firework: true
+  enable-priority-join: true
+
+cooldowns:
+  feed-seconds: 180
+  heal-seconds: 600
+  near-seconds: 30
+
+tiers:
+  VIP:
+    display-name: "&a&lVIP"
+    prefix: "&a[VIP] "
+    color: "&a"
+    priority-join: true
+    join-message: "&8[&a&lVIP&8] &a{player} &7sunucuya iniş yaptı!"
+    perks:
+      - "fly"
+      - "feed"
+      - "craft"
+      - "hat"
+    near-radius: 35
+    kit:
+      cooldown-hours: 24
+      items:
+        - "IRON_HELMET:1:PROTECTION_ENVIRONMENTAL:2"
+        - "IRON_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2"
+        - "IRON_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2"
+        - "IRON_BOOTS:1:PROTECTION_ENVIRONMENTAL:2"
+        - "IRON_SWORD:1:DAMAGE_ALL:2"
+        - "GOLDEN_APPLE:8"
+        - "COOKED_BEEF:32"
+
+  VIP_PLUS:
+    display-name: "&2&lVIP+"
+    prefix: "&2[VIP+] "
+    color: "&2"
+    priority-join: true
+    join-message: "&8[&2&lVIP+&8] &2{player} &7sunucuya katıldı!"
+    perks:
+      - "fly"
+      - "feed"
+      - "craft"
+      - "anvil"
+      - "hat"
+      - "enderchest"
+    near-radius: 50
+    kit:
+      cooldown-hours: 24
+      items:
+        - "DIAMOND_HELMET:1:PROTECTION_ENVIRONMENTAL:2"
+        - "DIAMOND_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2"
+        - "DIAMOND_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2"
+        - "DIAMOND_BOOTS:1:PROTECTION_ENVIRONMENTAL:2"
+        - "DIAMOND_SWORD:1:DAMAGE_ALL:3"
+        - "GOLDEN_APPLE:16"
+        - "COOKED_BEEF:64"
+
+  MVP:
+    display-name: "&b&lMVP"
+    prefix: "&b[MVP] "
+    color: "&b"
+    priority-join: true
+    join-message: "&8[&b&lMVP&8] &b{player} &7görkemli bir şekilde bağlandı!"
+    perks:
+      - "fly"
+      - "feed"
+      - "heal"
+      - "craft"
+      - "anvil"
+      - "hat"
+      - "enderchest"
+      - "near"
+    near-radius: 75
+    kit:
+      cooldown-hours: 24
+      items:
+        - "DIAMOND_HELMET:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "DIAMOND_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "DIAMOND_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "DIAMOND_BOOTS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "DIAMOND_SWORD:1:DAMAGE_ALL:4:FIRE_ASPECT:1"
+        - "GOLDEN_APPLE:24"
+        - "EXPERIENCE_BOTTLE:32"
+
+  AQUA_LEGEND:
+    display-name: "&3&lAQUA &b&lLEGEND"
+    prefix: "&3[LEGEND] "
+    color: "&3"
+    priority-join: true
+    join-message: "&8[&3&lAQUA &b&lLEGEND&8] &3&l{player} &7sunucuyu aydınlattı! ⚡"
+    perks:
+      - "fly"
+      - "feed"
+      - "heal"
+      - "craft"
+      - "anvil"
+      - "hat"
+      - "enderchest"
+      - "near"
+    near-radius: 100
+    kit:
+      cooldown-hours: 24
+      items:
+        - "NETHERITE_HELMET:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
+        - "NETHERITE_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
+        - "NETHERITE_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
+        - "NETHERITE_BOOTS:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
+        - "NETHERITE_SWORD:1:DAMAGE_ALL:5:FIRE_ASPECT:2:LOOT_BONUS_MOBS:3"
+        - "ENCHANTED_GOLDEN_APPLE:4"
+        - "EXPERIENCE_BOTTLE:64"
