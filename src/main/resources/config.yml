@@ -20,13 +20,14 @@ tiers:
   # 1. [VIP] - Lime Green with Winged Badge & Sparkles
   # ----------------------------------------------------------------------------
   VIP:
+    glyph: "\uE001"
     display-name: "&a&l[VIP]"
     badge-symbol: "✦"
-    prefix: "&a&l[VIP] &r"
+    prefix: "\uE001 &a&l[VIP] &r"
     color: "&a"
     hex-color: "#7CFC00"
     priority-join: true
-    join-message: "&8[&a&l✦ VIP ✦&8] &a{player} &7sunucuya iniş yaptı!"
+    join-message: "&8[\uE001 &a&l✦ VIP ✦&8] &a{player} &7sunucuya iniş yaptı!"
     firework:
       type: "STAR"
       colors: ["#7CFC00", "#55FF55", "#FFFFFF"]
@@ -52,13 +53,14 @@ tiers:
   # 2. [VIP+] - Dark Emerald Green with Gold Border & Golden Plus
   # ----------------------------------------------------------------------------
   VIP_PLUS:
+    glyph: "\uE002"
     display-name: "&2&l[VIP&6+&2&l]"
     badge-symbol: "❖"
-    prefix: "&2&l[VIP&6+&2&l] &r"
+    prefix: "\uE002 &2&l[VIP&6+&2&l] &r"
     color: "&2"
     hex-color: "#00AA00"
     priority-join: true
-    join-message: "&8[&2&l❖ VIP&6+&2&l ❖&8] &2{player} &7sunucuya katıldı!"
+    join-message: "&8[\uE002 &2&l❖ VIP&6+&2&l ❖&8] &2{player} &7sunucuya katıldı!"
     firework:
       type: "BURST"
       colors: ["#00AA00", "#FFD700", "#55FF55"]
@@ -86,13 +88,14 @@ tiers:
   # 3. [MVP] - Frost Ice Cyan with Crystal Border Reflections
   # ----------------------------------------------------------------------------
   MVP:
+    glyph: "\uE003"
     display-name: "&b&l[MVP]"
     badge-symbol: "❄"
-    prefix: "&b&l[MVP] &r"
+    prefix: "\uE003 &b&l[MVP] &r"
     color: "&b"
     hex-color: "#38BDF8"
     priority-join: true
-    join-message: "&8[&b&l❄ MVP ❄&8] &b{player} &7buz kristalleriyle bağlandı!"
+    join-message: "&8[\uE003 &b&l❄ MVP ❄&8] &b{player} &7buz kristalleriyle bağlandı!"
     firework:
       type: "BALL_LARGE"
       colors: ["#38BDF8", "#00FFFF", "#E0F2FE"]
@@ -122,13 +125,14 @@ tiers:
   # 4. [MVP+] - Radiant Gold / Amber with Star Sparkles & Red Plus
   # ----------------------------------------------------------------------------
   MVP_PLUS:
+    glyph: "\uE004"
     display-name: "&6&l[MVP&c+&6&l]"
     badge-symbol: "⭐"
-    prefix: "&6&l[MVP&c+&6&l] &r"
+    prefix: "\uE004 &6&l[MVP&c+&6&l] &r"
     color: "&6"
     hex-color: "#FFAA00"
     priority-join: true
-    join-message: "&8[&6&l⭐ MVP&c+&6&l ⭐&8] &6&l{player} &7altın ışıltısıyla parladı!"
+    join-message: "&8[\uE004 &6&l⭐ MVP&c+&6&l ⭐&8] &6&l{player} &7altın ışıltısıyla parladı!"
     firework:
       type: "STAR"
       colors: ["#FFAA00", "#FFD700", "#FF3333"]
@@ -159,13 +163,14 @@ tiers:
   # 5. [ELITE] - Void Obsidian Purple with Winged Horns & Void Sparks
   # ----------------------------------------------------------------------------
   ELITE:
+    glyph: "\uE005"
     display-name: "&5&l[ELITE]"
     badge-symbol: "⚡"
-    prefix: "&5&l[ELITE] &r"
+    prefix: "\uE005 &5&l[ELITE] &r"
     color: "&5"
     hex-color: "#A855F7"
     priority-join: true
-    join-message: "&8[&5&l⚡ ‹ELITE› ⚡&8] &d&l{player} &7hiçliğin kudretiyle sunucuyu sarstı!"
+    join-message: "&8[\uE005 &5&l⚡ ‹ELITE› ⚡&8] &d&l{player} &7hiçliğin kudretiyle sunucuyu sarstı!"
     firework:
       type: "CREEPER"
       colors: ["#A855F7", "#7E22CE", "#E879F9", "#000000"]

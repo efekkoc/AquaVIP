@@ -1,0 +1,49 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "aquaforge:ranks/vip.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "\uE001"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "aquaforge:ranks/vip_plus.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "\uE002"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "aquaforge:ranks/mvp.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "\uE003"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "aquaforge:ranks/mvp_plus.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "\uE004"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "aquaforge:ranks/elite.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "\uE005"
+      ]
+    }
+  ]
+}

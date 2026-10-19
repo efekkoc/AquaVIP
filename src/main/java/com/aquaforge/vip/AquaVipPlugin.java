@@ -37,11 +37,21 @@ public class AquaVipPlugin extends JavaPlugin {
         getCommand("takevip").setExecutor(adminCmd);
         getCommand("takevip").setTabCompleter(adminCmd);
 
-        // Register Info & Kit Commands
+        // Register Info & Kit Commands and GUI Listener
         VipInfoCommand infoCmd = new VipInfoCommand(this);
+        getServer().getPluginManager().registerEvents(infoCmd, this);
         getCommand("vip").setExecutor(infoCmd);
         getCommand("viptime").setExecutor(infoCmd);
         getCommand("vipkit").setExecutor(infoCmd);
+
+        // Export official Server Ranks resource pack if needed
+        try {
+            java.io.File rpFile = new java.io.File(getDataFolder(), "AquaRanks-ResourcePack.zip");
+            if (!rpFile.exists()) {
+                saveResource("AquaRanks-ResourcePack.zip", false);
+                getLogger().info("Extracted official Server Ranks resource pack: AquaRanks-ResourcePack.zip");
+            }
+        } catch (Exception ignored) {}
 
         // Register Perks Commands
         VipPerksCommands perksCmd = new VipPerksCommands(this);
