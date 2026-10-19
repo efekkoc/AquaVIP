@@ -15,6 +15,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.inventory.meta.FireworkMeta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VipPerksListener implements Listener {
 
     private final AquaVipPlugin plugin;
@@ -53,28 +56,66 @@ public class VipPerksListener implements Listener {
                 plugin.getBridge().broadcastVipJoin(player, sub.getTier());
             }
 
-            // Spawn firework
+            // Spawn custom tier firework
             if (plugin.getConfig().getBoolean("settings.spawn-join-firework", true)) {
-                spawnFirework(player.getLocation());
+                spawnTierFirework(player.getLocation(), sub.getTier());
             }
 
             // Send notification
-            player.sendMessage("§b§l[AquaVIP] §7Aktif üyeliğiniz: §e" + sub.getTier() + " §8| §7Kalan Süre: §a" + sub.getRemainingFormatted());
+            String dName = plugin.getConfig().getString("tiers." + sub.getTier() + ".display-name", sub.getTier());
+            player.sendMessage("§b§l[AquaVIP] §7Aktif üyeliğiniz: §f" + dName + " §8| §7Kalan Süre: §a" + sub.getRemainingFormatted());
         }
     }
 
-    private void spawnFirework(Location loc) {
+    private void spawnTierFirework(Location loc, String tier) {
         try {
             Firework fw = (Firework) loc.getWorld().spawnEntity(loc, EntityType.FIREWORK_ROCKET);
             FireworkMeta fwm = fw.getFireworkMeta();
             fwm.setPower(1);
-            fwm.addEffect(FireworkEffect.builder()
-                    .withColor(Color.AQUA, Color.TEAL, Color.WHITE)
-                    .withFade(Color.NAVY)
-                    .with(FireworkEffect.Type.BALL_LARGE)
+
+            String path = "tiers." + tier + ".firework";
+            String typeName = plugin.getConfig().getString(path + ".type", "BALL_LARGE");
+            FireworkEffect.Type type;
+            try {
+                type = FireworkEffect.Type.valueOf(typeName.toUpperCase());
+            } catch (Exception e) {
+                type = FireworkEffect.Type.BALL_LARGE;
+            }
+
+            List<String> hexColors = plugin.getConfig().getStringList(path + ".colors");
+            List<Color> colors = parseColors(hexColors, Color.AQUA);
+
+            List<String> hexFades = plugin.getConfig().getStringList(path + ".fade");
+            List<Color> fades = parseColors(hexFades, Color.WHITE);
+
+            FireworkEffect effect = FireworkEffect.builder()
+                    .with(type)
+                    .withColor(colors)
+                    .withFade(fades)
                     .trail(true)
-                    .build());
+                    .flicker(true)
+                    .build();
+
+            fwm.addEffect(effect);
             fw.setFireworkMeta(fwm);
         } catch (Exception ignored) {}
+    }
+
+    private List<Color> parseColors(List<String> hexList, Color fallback) {
+        List<Color> list = new ArrayList<>();
+        if (hexList == null || hexList.isEmpty()) {
+            list.add(fallback);
+            return list;
+        }
+
+        for (String hex : hexList) {
+            try {
+                java.awt.Color awt = java.awt.Color.decode(hex);
+                list.add(Color.fromRGB(awt.getRed(), awt.getGreen(), awt.getBlue()));
+            } catch (Exception e) {
+                list.add(fallback);
+            }
+        }
+        return list;
     }
 }

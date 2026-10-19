@@ -1,6 +1,7 @@
 # ==============================================================================
 #                      AquaVIP Enterprise Configuration
 #                 AquaForge Ecosystem - Multi-Tier Monetization
+#          Rank Roster & Badge Visuals Matching Server Ranks Artwork
 # ==============================================================================
 
 settings:
@@ -15,12 +16,21 @@ cooldowns:
   near-seconds: 30
 
 tiers:
+  # ----------------------------------------------------------------------------
+  # 1. [VIP] - Lime Green with Winged Badge & Sparkles
+  # ----------------------------------------------------------------------------
   VIP:
-    display-name: "&a&lVIP"
-    prefix: "&a[VIP] "
+    display-name: "&a&l[VIP]"
+    badge-symbol: "✦"
+    prefix: "&a&l[VIP] &r"
     color: "&a"
+    hex-color: "#7CFC00"
     priority-join: true
-    join-message: "&8[&a&lVIP&8] &a{player} &7sunucuya iniş yaptı!"
+    join-message: "&8[&a&l✦ VIP ✦&8] &a{player} &7sunucuya iniş yaptı!"
+    firework:
+      type: "STAR"
+      colors: ["#7CFC00", "#55FF55", "#FFFFFF"]
+      fade: ["#00AA00"]
     perks:
       - "fly"
       - "feed"
@@ -30,20 +40,29 @@ tiers:
     kit:
       cooldown-hours: 24
       items:
-        - "IRON_HELMET:1:PROTECTION_ENVIRONMENTAL:2"
-        - "IRON_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2"
-        - "IRON_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2"
-        - "IRON_BOOTS:1:PROTECTION_ENVIRONMENTAL:2"
-        - "IRON_SWORD:1:DAMAGE_ALL:2"
+        - "IRON_HELMET:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "IRON_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "IRON_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "IRON_BOOTS:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "IRON_SWORD:1:DAMAGE_ALL:3:DURABILITY:2"
         - "GOLDEN_APPLE:8"
         - "COOKED_BEEF:32"
 
+  # ----------------------------------------------------------------------------
+  # 2. [VIP+] - Dark Emerald Green with Gold Border & Golden Plus
+  # ----------------------------------------------------------------------------
   VIP_PLUS:
-    display-name: "&2&lVIP+"
-    prefix: "&2[VIP+] "
+    display-name: "&2&l[VIP&6+&2&l]"
+    badge-symbol: "❖"
+    prefix: "&2&l[VIP&6+&2&l] &r"
     color: "&2"
+    hex-color: "#00AA00"
     priority-join: true
-    join-message: "&8[&2&lVIP+&8] &2{player} &7sunucuya katıldı!"
+    join-message: "&8[&2&l❖ VIP&6+&2&l ❖&8] &2{player} &7sunucuya katıldı!"
+    firework:
+      type: "BURST"
+      colors: ["#00AA00", "#FFD700", "#55FF55"]
+      fade: ["#FFAA00"]
     perks:
       - "fly"
       - "feed"
@@ -55,20 +74,29 @@ tiers:
     kit:
       cooldown-hours: 24
       items:
-        - "DIAMOND_HELMET:1:PROTECTION_ENVIRONMENTAL:2"
-        - "DIAMOND_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2"
-        - "DIAMOND_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2"
-        - "DIAMOND_BOOTS:1:PROTECTION_ENVIRONMENTAL:2"
-        - "DIAMOND_SWORD:1:DAMAGE_ALL:3"
+        - "DIAMOND_HELMET:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "DIAMOND_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "DIAMOND_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "DIAMOND_BOOTS:1:PROTECTION_ENVIRONMENTAL:2:DURABILITY:2"
+        - "DIAMOND_SWORD:1:DAMAGE_ALL:3:FIRE_ASPECT:1"
         - "GOLDEN_APPLE:16"
         - "COOKED_BEEF:64"
 
+  # ----------------------------------------------------------------------------
+  # 3. [MVP] - Frost Ice Cyan with Crystal Border Reflections
+  # ----------------------------------------------------------------------------
   MVP:
-    display-name: "&b&lMVP"
-    prefix: "&b[MVP] "
+    display-name: "&b&l[MVP]"
+    badge-symbol: "❄"
+    prefix: "&b&l[MVP] &r"
     color: "&b"
+    hex-color: "#38BDF8"
     priority-join: true
-    join-message: "&8[&b&lMVP&8] &b{player} &7görkemli bir şekilde bağlandı!"
+    join-message: "&8[&b&l❄ MVP ❄&8] &b{player} &7buz kristalleriyle bağlandı!"
+    firework:
+      type: "BALL_LARGE"
+      colors: ["#38BDF8", "#00FFFF", "#E0F2FE"]
+      fade: ["#0284C7"]
     perks:
       - "fly"
       - "feed"
@@ -86,16 +114,25 @@ tiers:
         - "DIAMOND_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
         - "DIAMOND_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
         - "DIAMOND_BOOTS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
-        - "DIAMOND_SWORD:1:DAMAGE_ALL:4:FIRE_ASPECT:1"
+        - "DIAMOND_SWORD:1:DAMAGE_ALL:4:FIRE_ASPECT:2:DURABILITY:3"
         - "GOLDEN_APPLE:24"
         - "EXPERIENCE_BOTTLE:32"
 
-  AQUA_LEGEND:
-    display-name: "&3&lAQUA &b&lLEGEND"
-    prefix: "&3[LEGEND] "
-    color: "&3"
+  # ----------------------------------------------------------------------------
+  # 4. [MVP+] - Radiant Gold / Amber with Star Sparkles & Red Plus
+  # ----------------------------------------------------------------------------
+  MVP_PLUS:
+    display-name: "&6&l[MVP&c+&6&l]"
+    badge-symbol: "⭐"
+    prefix: "&6&l[MVP&c+&6&l] &r"
+    color: "&6"
+    hex-color: "#FFAA00"
     priority-join: true
-    join-message: "&8[&3&lAQUA &b&lLEGEND&8] &3&l{player} &7sunucuyu aydınlattı! ⚡"
+    join-message: "&8[&6&l⭐ MVP&c+&6&l ⭐&8] &6&l{player} &7altın ışıltısıyla parladı!"
+    firework:
+      type: "STAR"
+      colors: ["#FFAA00", "#FFD700", "#FF3333"]
+      fade: ["#CC0000"]
     perks:
       - "fly"
       - "feed"
@@ -105,14 +142,53 @@ tiers:
       - "hat"
       - "enderchest"
       - "near"
-    near-radius: 100
+    near-radius: 90
     kit:
       cooldown-hours: 24
       items:
-        - "NETHERITE_HELMET:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
-        - "NETHERITE_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
-        - "NETHERITE_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
-        - "NETHERITE_BOOTS:1:PROTECTION_ENVIRONMENTAL:4:MENDING:1"
-        - "NETHERITE_SWORD:1:DAMAGE_ALL:5:FIRE_ASPECT:2:LOOT_BONUS_MOBS:3"
-        - "ENCHANTED_GOLDEN_APPLE:4"
+        - "NETHERITE_HELMET:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "NETHERITE_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "NETHERITE_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "NETHERITE_BOOTS:1:PROTECTION_ENVIRONMENTAL:3:DURABILITY:3"
+        - "NETHERITE_SWORD:1:DAMAGE_ALL:5:FIRE_ASPECT:2:DURABILITY:3"
+        - "ENCHANTED_GOLDEN_APPLE:2"
+        - "GOLDEN_APPLE:32"
+        - "EXPERIENCE_BOTTLE:64"
+
+  # ----------------------------------------------------------------------------
+  # 5. [ELITE] - Void Obsidian Purple with Winged Horns & Void Sparks
+  # ----------------------------------------------------------------------------
+  ELITE:
+    display-name: "&5&l[ELITE]"
+    badge-symbol: "⚡"
+    prefix: "&5&l[ELITE] &r"
+    color: "&5"
+    hex-color: "#A855F7"
+    priority-join: true
+    join-message: "&8[&5&l⚡ ‹ELITE› ⚡&8] &d&l{player} &7hiçliğin kudretiyle sunucuyu sarstı!"
+    firework:
+      type: "CREEPER"
+      colors: ["#A855F7", "#7E22CE", "#E879F9", "#000000"]
+      fade: ["#3B0764"]
+    perks:
+      - "fly"
+      - "feed"
+      - "heal"
+      - "craft"
+      - "anvil"
+      - "hat"
+      - "enderchest"
+      - "near"
+    near-radius: 120
+    kit:
+      cooldown-hours: 24
+      items:
+        - "NETHERITE_HELMET:1:PROTECTION_ENVIRONMENTAL:4:DURABILITY:3:MENDING:1"
+        - "NETHERITE_CHESTPLATE:1:PROTECTION_ENVIRONMENTAL:4:DURABILITY:3:MENDING:1"
+        - "NETHERITE_LEGGINGS:1:PROTECTION_ENVIRONMENTAL:4:DURABILITY:3:MENDING:1"
+        - "NETHERITE_BOOTS:1:PROTECTION_ENVIRONMENTAL:4:DURABILITY:3:MENDING:1"
+        - "NETHERITE_SWORD:1:DAMAGE_ALL:5:FIRE_ASPECT:2:LOOT_BONUS_MOBS:3:DURABILITY:3:MENDING:1"
+        - "NETHERITE_PICKAXE:1:DIG_SPEED:5:DURABILITY:3:MENDING:1"
+        - "ENCHANTED_GOLDEN_APPLE:5"
+        - "TOTEM_OF_UNDYING:1"
         - "EXPERIENCE_BOTTLE:64"

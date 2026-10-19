@@ -54,6 +54,18 @@
 
 ---
 
+### 🎖️ Official Server Ranks Roster & Visual Badges
+
+| Rank Tier | Visual Badge Style | Theme & Color Palette | Included Perks & Kits |
+| :--- | :--- | :--- | :--- |
+| **`VIP`** | `✦ [VIP] ✦` | Lime Green (`#7CFC00`) with winged pill badge & star sparkles | `/fly`, `/feed`, `/craft`, `/hat`, Tier I Kit |
+| **`VIP_PLUS`** | `❖ [VIP+] ❖` | Dark Emerald (`#00AA00`) with gold border & golden `+` | `/fly`, `/feed`, `/craft`, `/anvil`, `/ec`, `/hat`, Tier II Kit |
+| **`MVP`** | `❄ [MVP] ❄` | Frost Ice Cyan (`#38BDF8`) with crystal reflections & ice bursts | `/fly`, `/feed`, `/heal`, `/craft`, `/anvil`, `/ec`, `/hat`, `/near`, Tier III Kit |
+| **`MVP_PLUS`** | `⭐ [MVP+] ⭐` | Radiant Gold (`#FFAA00`) with red `+` & star sparkles | Extended `/near` (90m), Netherite gear, Golden Apples |
+| **`ELITE`** | `⚡ ‹ELITE› ⚡` | Void Obsidian Purple (`#A855F7`) with winged horns & void aura | Full perk suite, 120m radar, Totem of Undying, Master Netherite Kit |
+
+---
+
 ### 📦 Web Store Console Setup Example
 
 In your web-store console command dispatcher (Tebex, CraftingStore, Keyubu):
@@ -61,11 +73,17 @@ In your web-store console command dispatcher (Tebex, CraftingStore, Keyubu):
 # For 30 Days VIP:
 givevip {name} VIP 30d
 
+# For 30 Days VIP+:
+givevip {name} VIP_PLUS 30d
+
 # For 60 Days MVP:
 givevip {name} MVP 60d
 
-# For Lifetime AQUA_LEGEND:
-givevip {name} AQUA_LEGEND permanent
+# For 60 Days MVP+:
+givevip {name} MVP_PLUS 60d
+
+# For Lifetime ELITE:
+givevip {name} ELITE permanent
 ```
 
 ---

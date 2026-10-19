@@ -75,9 +75,10 @@ public class VipInfoCommand implements CommandExecutor {
         if (plugin.getConfig().isConfigurationSection("tiers")) {
             for (String key : plugin.getConfig().getConfigurationSection("tiers").getKeys(false)) {
                 String dName = plugin.getConfig().getString("tiers." + key + ".display-name", key);
+                String badge = plugin.getConfig().getString("tiers." + key + ".badge-symbol", "★");
                 List<String> perks = plugin.getConfig().getStringList("tiers." + key + ".perks");
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                        " " + dName + " &8» &f" + String.join(", ", perks)));
+                        " &e" + badge + " " + dName + " &8» &f" + String.join("&7, &f", perks)));
             }
         }
         sender.sendMessage(ChatColor.GRAY + "VIP satın almak ve sunucuyu desteklemek için web mağazamızı ziyaret edin!");
